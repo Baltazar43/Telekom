@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добро пожаловать"
+        android:textStyle="bold"
+        android:textColor="#2A31BF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Логин"
+        android:padding="12dp"
+        android:textColor="#A3AED0"
+        android:textColorHint="#A3AED0"
+        android:background="@drawable/rounded_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="62dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="25dp"
+        android:singleLine="true"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Пароль"
+        android:padding="12dp"
+        android:textColor="#A3AED0"
+        android:textColorHint="#A3AED0"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="62dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:singleLine="true"
+        android:imeOptions="actionNext"/>
+
+    <CheckBox
+        android:id="@+id/cbRememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Запомнить меня"
+        android:textColor="#2A31BF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Вход"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintTop_toBottomOf="@+id/cbRememberMe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="62dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

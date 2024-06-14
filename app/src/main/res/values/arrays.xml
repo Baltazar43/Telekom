@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="station_types">
+        <item>Гранит 3Р-21АЦ</item>
+        <item>Моторола GM360</item>
+        <!-- Добавьте другие типы станций по мере необходимости -->
+    </string-array>
+
+    <string-array name="operations">
+        <item>Замена шаровой опоры 1</item>
+        <item>Замена шаровой опоры 2</item>
+        <!-- Добавьте другие операции по мере необходимости -->
+    </string-array>
+
+    <string-array name="materials">
+        <item>Гранит</item>
+        <item>Гравий</item>
+        <!-- Добавьте другие материалы по мере необходимости -->
+    </string-array>
+</resources>

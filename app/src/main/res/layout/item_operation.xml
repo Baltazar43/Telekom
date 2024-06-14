@@ -1,0 +1,74 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/rounded_blue_corners">
+
+    <!-- Название операции и кнопка удаления -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/operation_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Операция"
+            android:textStyle="bold"
+            android:textColor="#2B3674"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/delete_operation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="#EE5D50"
+            android:text="Удалить"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Комментарий к операции -->
+    <EditText
+        android:id="@+id/comment_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Комментарий"
+        android:textColor="#2B3674"
+        android:textSize="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Контейнер для материалов -->
+    <LinearLayout
+        android:id="@+id/materials_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <!-- Кнопка добавления материалов -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/add_material_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить материал"
+            android:background="@drawable/rounded_button"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"/>
+    </LinearLayout>
+
+</LinearLayout>

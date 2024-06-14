@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corners"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Status and Other Information -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Статус заказа:"
+                android:textSize="16sp"
+                android:textColor="#A3AED0"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/order_1_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="В процессе"
+                android:textSize="14sp"
+                android:textColor="#FFCE20"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/order_1_exclamation_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_exclamation"
+                android:contentDescription="@string/exclamation_icon_desc"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Период работ:"
+                android:textSize="16sp"
+                android:textColor="#A3AED0"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1/10/12"
+                android:textSize="16sp"
+                android:textColor="#2B3674"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Организация:"
+                android:textSize="16sp"
+                android:textColor="#A3AED0"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Котласская АК"
+                android:textSize="16sp"
+                android:textColor="#2B3674"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/label_employees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сотрудники:"
+                android:textSize="16sp"
+                android:textColor="#A3AED0"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_employees"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Шишкин Сергей Сергеевич, Шишкин Сергей Сергеевич, Шишкин Сергей Сергеевич"
+                android:textSize="16sp"
+                android:textColor="#2B3674"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:gravity="end"
+                app:layout_constraintStart_toEndOf="@id/label_employees"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#A3AED0"
+            android:layout_marginBottom="8dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/operation_autocomplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2B3674"
+            android:background="@drawable/rounded_edittext"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:padding="12dp"
+            android:hint="Выберите операцию или введите новую"
+            android:layout_marginBottom="8dp" />
+        <!-- Completed Work and Operations -->
+
+
+        <Button
+            android:id="@+id/add_operation_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="Добавить операцию"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/operations_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Additional Forms -->
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2B3674"
+            android:background="@drawable/rounded_edittext"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:padding="12dp"
+            android:hint="Дата / кв:"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2B3674"
+            android:background="@drawable/rounded_edittext"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:padding="12dp"
+            android:hint="Время работ:"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/remarks1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Примечания"
+            android:textColor="#2B3674"
+            android:background="@drawable/rounded_edittext"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/remarks2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Примечания 2"
+            android:textColor="#2B3674"
+            android:background="@drawable/rounded_edittext"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Save and Send Buttons -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            >
+
+            <TextView
+                android:id="@+id/save_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Сохранить"
+                android:textColor="#2B3674"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_button"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Отправить"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

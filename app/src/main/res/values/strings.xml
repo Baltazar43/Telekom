@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Telekom</string>
+    <string name="title_home">Главная</string>
+    <string name="title_dashboard">Заказы</string>
+    <string name="title_notifications">Профиль</string>
+    <string name="user_photo_desc">User Photo</string>
+    <string name="settings_icon_desc">Settings Icon</string>
+    <string name="exclamation_icon_desc">Exclamation Icon</string>
+    <string name="back_arrow_desc">Назад</string>
+    <string name="choose_operation_prompt">Выберите операцию</string>
+</resources>
